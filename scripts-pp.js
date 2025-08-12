@@ -57,8 +57,11 @@ const editCancelBtn = document.getElementById('edit-cancel-btn');
 const addTask = document.getElementById('addTaskButton');
 const toggle = document.getElementById("themeToggle");
 const sidebar = document.querySelector('.sidebar');
-const hideSidebarBtn = document.getElementById("hideSidebar");
+const hideSidebarBtn = document.getElementById('hideSidebar');
 const showSidebarBtn = document.getElementById('showSidebar');
+const mobileSidebar = document.getElementById('drawer');
+const mobileSidebarBtn = document.getElementById('mobileSidebarBtn');
+const closeMobileSidebarBtn = document.getElementById('closeMobileSidebarBtn');
 
 // Modal input fields that are stored and showed
 const taskIdInput = document.getElementById('task-id');
@@ -297,6 +300,16 @@ function showSidebarVisability() {
     localStorage.setItem('sidebarHidden', 'false');
 }
 
+function showSidebarVisabilityMobile(){
+    mobileSidebar.classList.remove('hidden');
+    localStorage.setItem('sidebarHidden', 'false');
+}
+
+function hideSidebarVisabilityMobile(){
+    mobileSidebar.classList.add('hidden');
+    localStorage.setItem('sidebarHidden', 'true');
+}
+
 function checkSidebarState () {
     const isHidden = localStorage.getItem('sidebarHidden') === 'true';
     if (isHidden){
@@ -354,6 +367,8 @@ function setupEventListeners() {
 
     hideSidebarBtn.addEventListener('click', hideSidebarVisability);
     showSidebarBtn.addEventListener('click', showSidebarVisability);
+    mobileSidebarBtn.addEventListener('click', showSidebarVisabilityMobile);
+    closeMobileSidebarBtn.addEventListener('click', hideSidebarVisabilityMobile);
 }
 
 // Initialize the board initially there was 8 now there will be 6
