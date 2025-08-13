@@ -88,7 +88,7 @@ let currentTask = null;
  */
 function createTaskElement(initialTasks) {
     const taskElementCreated = document.createElement("li"); // Creates an HTML list item element for a task
-    taskElementCreated.className = 'task mt-4 py-5 px-3 mr-2 w-max-[320px] xl:w-[280px] h-[60px] bg-white rounded-lg shadow-[0px_4px_6px_0px_rgba(54,78,126,0.1)] transition-all hover:shadow-md';
+    taskElementCreated.className = 'task mt-4 py-5 px-2 mr-2 w-max-[320px] xl:w-[280px] h-[60px] bg-white rounded-lg shadow-[0px_4px_6px_0px_rgba(54,78,126,0.1)] transition-all hover:shadow-md';
     // Sets appropriate classes for styling and also creates a className for the new class
     taskElementCreated.innerHTML = `<h3 class="font-bold">${initialTasks.title}</h3>`;
     taskElementCreated.setAttribute('data-id', initialTasks.id);
