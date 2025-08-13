@@ -198,17 +198,24 @@ function deleteCanceled(){
 function addTasksubmit(e) {
     e.preventDefault();
     validateInputs();
-    closeModal();
-    showSortedTasks();
+
+    if(validateInputs()){
+        closeModal();
+        showSortedTasks();
+    }
+    
 };
 
 const setError = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
 
-    errorDisplay.innerText = message;
-    inputControl.classList.add('error');
-    inputControl.classList.remove('sucesss');
+    if (errorDisplay) {
+        errorDisplay.innerText = message;
+        inputControl.classList.add('error');
+        inputControl.classList.remove('sucesss');
+    }
+    
 };
 
 // Creating a cussess
@@ -216,9 +223,11 @@ const setSuccess = element => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
 
-    errorDisplay.innerText = '';
-    inputControl.classList.add('sucesss');
-    inputControl.classList.remove('error');
+    if(!errorDisplay){
+        errorDisplay.innerText = '';
+        inputControl.classList.add('sucesss');
+        inputControl.classList.remove('error');
+    }
 };
 
 // Validating inputs
@@ -227,26 +236,32 @@ const validateInputs = () => {
     const taskDescInputValue = taskDescInput.value.trim();
     const taskStatusInputValue = taskStatusInput.value;
 
-    if(!taskTitleInputValue || taskTitleInputValue.trim() === "") {
-        setError(taskTitleInputValue, "Task title cannot be empty!");
-    } else{
-        setSuccess(taskTitleInputValue);
+    let isValid = true;
+
+    if(!taskTitleInputValue) {
+        setError(taskTitleInput, "Task title cannot be empty!");
+        isValid = false;
+    } else {
+        setSuccess(taskTitleInput);
     }
 
-    if(!taskDescInputValue || taskDescInputValue.trim() === "") {
-        setError(taskDescInputValue, "Task description cannot be empty!");
-    } else{
-        setSuccess(taskDescInputValue);
+    if(!taskDescInputValue) {
+        setError(taskDescInput, "Task description cannot be empty!");
+        isValid = false;
+    } else {
+        setSuccess(taskDescInput);
     }
 
-    if(!taskStatusInputValue || taskStatusInputValue === "") {
-        setError(taskStatusInputValue, "INVALID STATUS! Please enter only: todo, doing, or done");
-    } else{
-        setSuccess(taskStatusInputValue);
+    if(!taskStatusInputValue) {
+        setError(taskStatusInput, "INVALID STATUS! Please enter only: todo, doing, or done");
+        isValid = false;
+    } else {
+        setSuccess(taskStatusInput);
     }
+
 
     // Store task details in object
-    if(taskTitleInputValue && taskDescInputValue && taskStatusInputValue) {
+    if(isValid) {
         const output = {
             id: initialTasks.length + 1,
             title: taskTitleInputValue,
@@ -258,7 +273,10 @@ const validateInputs = () => {
         initialTasks.push(output);
         
         saveTask();
+        return true
     }
+
+    return false;
 };
 
 // function to save task into local storage
