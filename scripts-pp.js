@@ -7,18 +7,21 @@ const initialTasks = JSON.parse(localStorage.getItem('initialTasks')) || [
     title: "Launch Epic Career 🚀",
     description: "Create a killer Resume",
     status: "todo",
+    priority: "medium"
   },
   {
     id: 2,
     title: "Master JavaScript 💛",
     description: "Get comfortable with the fundamentals",
     status: "doing",
+    priority: "low"
   },
   {
     id: 3,
     title: "Keep on Going 🏆",
     description: "You're almost there",
     status: "doing",
+    priority: "medium"
   },
 
   {
@@ -27,6 +30,7 @@ const initialTasks = JSON.parse(localStorage.getItem('initialTasks')) || [
     description:
       "Study fundamental data structures and algorithms to solve coding problems efficiently",
     status: "todo",
+    priority: "low"
   },
   {
     id: 5,
@@ -34,6 +38,7 @@ const initialTasks = JSON.parse(localStorage.getItem('initialTasks')) || [
     description:
       "Gain practical experience and collaborate with others in the software development community",
     status: "done",
+    priority: "high"
   },
   {
     id: 6,
@@ -41,6 +46,7 @@ const initialTasks = JSON.parse(localStorage.getItem('initialTasks')) || [
     description:
       "Create a portfolio showcasing your skills and projects to potential employers",
     status: "done",
+    priority: "high"
   },
 ];
 
@@ -73,9 +79,11 @@ const taskIdInput = document.getElementById('task-id');
 const taskTitleInput = document.getElementById('task-title');
 const taskDescInput = document.getElementById('task-description');
 const taskStatusInput = document.getElementById('task-status');
+const taskPriorityInput = document.getElementById('task-priority');
 const editTaskTitleInput = document.getElementById('edit-task-title');
 const editTaskDescInput = document.getElementById('edit-task-description');
 const editTaskStatusInput = document.getElementById('edit-task-status');
+const editTaskPriorityInput = document.getElementById('edit-task-priority');
 
 // Current task that I want to show
 let currentTask = null;
@@ -88,11 +96,25 @@ let currentTask = null;
  */
 function createTaskElement(initialTasks) {
     const taskElementCreated = document.createElement("li"); // Creates an HTML list item element for a task
-    taskElementCreated.className = 'task mt-4 py-5 px-2 mr-2 w-max-[320px] xl:w-[280px] h-[60px] bg-white rounded-lg shadow-[0px_4px_6px_0px_rgba(54,78,126,0.1)] transition-all hover:shadow-md';
-    // Sets appropriate classes for styling and also creates a className for the new class
-    taskElementCreated.innerHTML = `<h3 class="font-bold">${initialTasks.title}</h3>`;
-    taskElementCreated.setAttribute('data-id', initialTasks.id);
-    // Includes the task title and sets a data-id attribute
+    
+
+    if(initialTasks.priority === 'low') {
+        taskElementCreated.className = 'task mt-4 py-5 px-3 mr-2 w-max-[320px] xl:w-[280px] h-[60px] bg-white rounded-lg shadow-[0px_4px_6px_0px_rgba(54,78,126,0.1)] transition-all hover:shadow-md flex justify-between items-center';
+        // Sets appropriate classes for styling and also creates a className for the new class
+        taskElementCreated.innerHTML = `<h3 class="font-bold">${initialTasks.title} <span class="flex justify-end inline h-[15px] w-[15px]">🟢</span></h3>`;
+        taskElementCreated.setAttribute('data-id', initialTasks.id);
+    } if (initialTasks.priority === 'medium') {
+        taskElementCreated.className = 'task flex mt-4 py-5 px-3 mr-2 w-max-[320px] xl:w-[280px] h-[60px] bg-white rounded-lg shadow-[0px_4px_6px_0px_rgba(54,78,126,0.1)] transition-all hover:shadow-md';
+        // Sets appropriate classes for styling and also creates a className for the new class
+        taskElementCreated.innerHTML = `<h3 class="font-bold">${initialTasks.title} <span class="flex justify-end inline h-[15px] w-[15px]">🟠</span></h3>`;
+        taskElementCreated.setAttribute('data-id', initialTasks.id);
+    } else {
+        taskElementCreated.className = 'task flex mt-4 py-5 px-3 mr-2 w-max-[320px] xl:w-[280px] h-[60px] bg-white rounded-lg shadow-[0px_4px_6px_0px_rgba(54,78,126,0.1)] transition-all hover:shadow-md';
+        // Sets appropriate classes for styling and also creates a className for the new class
+        taskElementCreated.innerHTML = `<h3 class="font-bold">${initialTasks.title} <span class="flex justify-end inline h-[15px] w-[15px]">🔴</span></h3>`;
+        taskElementCreated.setAttribute('data-id', initialTasks.id);
+    }
+    
     return taskElementCreated;
     // Returns the created DOM element
 }
@@ -157,6 +179,7 @@ function openEditModal(taskId) {
     editTaskTitleInput.value = currentTask.title;
     editTaskDescInput.value = currentTask.description;
     editTaskStatusInput.value = currentTask.status;
+    editTaskPriorityInput.value = currentTask.priority;
   
     // Show the modal
     editModal.classList.remove('hidden');
@@ -234,6 +257,7 @@ const validateInputs = () => {
     const taskTitleInputValue = taskTitleInput.value.trim();
     const taskDescInputValue = taskDescInput.value.trim();
     const taskStatusInputValue = taskStatusInput.value;
+    const taskPriorityInputValue = taskPriorityInput.value;
 
     let isValid = true;
 
@@ -258,6 +282,13 @@ const validateInputs = () => {
         setSuccess(taskStatusInput);
     }
 
+    if(!taskPriorityInputValue) {
+        setError(taskPriorityInput, "INVALID STATUS! Please enter only: todo, doing, or done");
+        isValid = false;
+    } else {
+        setSuccess(taskPriorityInput);
+    }
+
 
     // Store task details in object
     if(isValid) {
@@ -265,7 +296,8 @@ const validateInputs = () => {
             id: initialTasks.length + 1,
             title: taskTitleInputValue,
             description: taskDescInputValue,
-            status: taskStatusInputValue
+            status: taskStatusInputValue,
+            priority: taskPriorityInputValue
         };
         
         // Add task to the existing array
@@ -302,6 +334,7 @@ function openModel() {
     taskTitleInput.value = '';
     taskDescInput.value = '';
     taskStatusInput.value = 'todo';
+    taskPriorityInput.value = 'low';
     modal.classList.remove('hidden')
 }
 
@@ -331,6 +364,7 @@ function saveTaskChanges(e) {
     currentTask.title = editTaskTitleInput.value;
     currentTask.description = editTaskDescInput.value;
     currentTask.status = editTaskStatusInput.value;
+    currentTask.priority = editTaskPriorityInput.value;
     
     // Refresh display
     // Refreshes the display and closes the modal
@@ -430,8 +464,6 @@ function setupEventListeners() {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeModal();
     });
-
-
 
     hideSidebarBtn.addEventListener('click', hideSidebarVisability);
     showSidebarBtn.addEventListener('click', showSidebarVisability);
