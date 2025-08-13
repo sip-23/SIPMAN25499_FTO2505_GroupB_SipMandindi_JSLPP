@@ -197,7 +197,6 @@ function deleteCanceled(){
  */
 function addTasksubmit(e) {
     e.preventDefault();
-    validateInputs();
 
     if(validateInputs()){
         closeModal();
@@ -207,26 +206,26 @@ function addTasksubmit(e) {
 };
 
 const setError = (element, message) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
+    const errorDisplay = document.getElementById(`${element.id}-error`);
 
     if (errorDisplay) {
         errorDisplay.innerText = message;
-        inputControl.classList.add('error');
-        inputControl.classList.remove('sucesss');
+        errorDisplay.classList.remove('hidden');
+        element.classList.add('border-red-500');
+        element.classList.remove('border-gray-300');
     }
     
 };
 
 // Creating a cussess
-const setSuccess = element => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-
-    if(!errorDisplay){
+const setSuccess = (element) => {
+    const errorDisplay = document.getElementById(`${element.id}-error`);
+    
+    if(errorDisplay){
         errorDisplay.innerText = '';
-        inputControl.classList.add('sucesss');
-        inputControl.classList.remove('error');
+        errorDisplay.classList.add('hidden');
+        element.classList.remove('border-red-500');
+        element.classList.add('border-gray-300');
     }
 };
 
@@ -239,14 +238,14 @@ const validateInputs = () => {
     let isValid = true;
 
     if(!taskTitleInputValue) {
-        setError(taskTitleInput, "Task title cannot be empty!");
+        setError(taskTitleInput, "Please fill out this field.");
         isValid = false;
     } else {
         setSuccess(taskTitleInput);
     }
 
     if(!taskDescInputValue) {
-        setError(taskDescInput, "Task description cannot be empty!");
+        setError(taskDescInput, "Please fill out this field.");
         isValid = false;
     } else {
         setSuccess(taskDescInput);
@@ -273,6 +272,8 @@ const validateInputs = () => {
         initialTasks.push(output);
         
         saveTask();
+
+        taskForm.reset();
         return true
     }
 
