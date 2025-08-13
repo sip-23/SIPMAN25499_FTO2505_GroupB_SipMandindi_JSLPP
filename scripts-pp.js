@@ -59,9 +59,14 @@ const toggle = document.getElementById("themeToggle");
 const sidebar = document.querySelector('.sidebar');
 const hideSidebarBtn = document.getElementById('hideSidebar');
 const showSidebarBtn = document.getElementById('showSidebar');
+const updateTaskBtn = document.getElementById('saveChangesBtn')
 const mobileSidebar = document.getElementById('drawer');
 const mobileSidebarBtn = document.getElementById('mobileSidebarBtn');
 const closeMobileSidebarBtn = document.getElementById('closeMobileSidebarBtn');
+const deleteTaskBtn = document.getElementById('deleteTaskBtn');
+const deleteConfirmation = document.getElementById('confirm');
+const delConfirmBtn = document.getElementById('delete-confirmed');
+const delCancelBtn = document.getElementById('delete-canceled');
 
 // Modal input fields that are stored and showed
 const taskIdInput = document.getElementById('task-id');
@@ -157,6 +162,32 @@ function openEditModal(taskId) {
     editModal.classList.remove('hidden');
 }
 
+// Function to open modal with task data
+/**
+ * Matches the Id of the selected task provides the information in the modal.
+ * @returns A modal that is populated with the informtion that the corresponds to the matched ID
+ */
+function deleteTaskConfirm(e) {
+    e.preventDefault();
+    showDeleteConfirmationDialog();
+}
+
+// Delete confirmation functions
+function showDeleteConfirmationDialog() {
+    deleteConfirmation.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function deleteConfirmed(){
+    deleteConfirmation.classList.add('hidden');
+    document.body.style.overflow = '';
+    deleteTask(currentTask.id);
+}
+
+function deleteCanceled(){
+    deleteConfirmation.classList.add('hidden');
+}
+
 // function to add new dask from the modal
 // save new task
 /**
@@ -197,21 +228,21 @@ const validateInputs = () => {
     const taskStatusInputValue = taskStatusInput.value;
 
     if(!taskTitleInputValue || taskTitleInputValue.trim() === "") {
-        setError(taskTitleInput, "Task title cannot be empty!");
+        setError(taskTitleInputValue, "Task title cannot be empty!");
     } else{
-        setSuccess(taskTitleInput);
+        setSuccess(taskTitleInputValue);
     }
 
     if(!taskDescInputValue || taskDescInputValue.trim() === "") {
-        setError(taskDescInput, "Task description cannot be empty!");
+        setError(taskDescInputValue, "Task description cannot be empty!");
     } else{
-        setSuccess(taskDescInput);
+        setSuccess(taskDescInputValue);
     }
 
     if(!taskStatusInputValue || taskStatusInputValue === "") {
-        setError(taskStatusInput, "INVALID STATUS! Please enter only: todo, doing, or done");
+        setError(taskStatusInputValue, "INVALID STATUS! Please enter only: todo, doing, or done");
     } else{
-        setSuccess(taskStatusInput);
+        setSuccess(taskStatusInputValue);
     }
 
     // Store task details in object
@@ -235,12 +266,23 @@ function saveTask() {
     localStorage.setItem("initialTasks", JSON.stringify(initialTasks)); // convertd array into string version for local storgae to work with it
 }
 
+// Function to delete task from local storage
+function deleteTask(taskId) {
+    const taskIndex = initialTasks.findIndex(task => task.id === taskId);
+    
+    if (taskIndex !== -1) {
+        initialTasks.splice(taskIndex, 1);
+        saveTask();
+        showSortedTasks();
+    }
+    closeModal();
+}
 
 // function to open modal
 function openModel() {
     taskTitleInput.value = '';
     taskDescInput.value = '';
-    taskStatusInput.value = '';
+    taskStatusInput.value = 'todo';
     modal.classList.remove('hidden')
 }
 
@@ -273,8 +315,9 @@ function saveTaskChanges(e) {
     
     // Refresh display
     // Refreshes the display and closes the modal
-    showSortedTasks();
+    saveTask()
     closeModal();
+    showSortedTasks();
 }
 
 // function to Hide sidebar
@@ -348,7 +391,11 @@ function setupEventListeners() {
     // Modal close and opening event listeners
     cancelBtn.addEventListener('click', closeModal);
     editCancelBtn.addEventListener('click', closeModal);
-    editTaskForm.addEventListener('update', saveTaskChanges);
+    updateTaskBtn.addEventListener('click', saveTaskChanges);
+    deleteTaskBtn.addEventListener('click', deleteTaskConfirm);
+    delConfirmBtn.addEventListener("click", deleteConfirmed);
+    delCancelBtn.addEventListener("click", deleteCanceled);
+
 
     // Close modal when clicking on the ouside of it
     modal.addEventListener('click', (e) => {
@@ -364,6 +411,8 @@ function setupEventListeners() {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeModal();
     });
+
+
 
     hideSidebarBtn.addEventListener('click', hideSidebarVisability);
     showSidebarBtn.addEventListener('click', showSidebarVisability);
