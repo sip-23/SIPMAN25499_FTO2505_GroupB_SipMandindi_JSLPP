@@ -73,6 +73,9 @@ const deleteTaskBtn = document.getElementById('deleteTaskBtn');
 const deleteConfirmation = document.getElementById('confirm');
 const delConfirmBtn = document.getElementById('delete-confirmed');
 const delCancelBtn = document.getElementById('delete-canceled');
+const toggleSlider = document.getElementById('themeToggle');
+const bod = document.documentElement;
+const toggleSliderMobile = document.getElementById('themeToggle-mobile');
 
 // Modal input fields that are stored and showed
 const taskIdInput = document.getElementById('task-id');
@@ -469,6 +472,44 @@ function setupEventListeners() {
     showSidebarBtn.addEventListener('click', showSidebarVisability);
     mobileSidebarBtn.addEventListener('click', showSidebarVisabilityMobile);
     closeMobileSidebarBtn.addEventListener('click', hideSidebarVisabilityMobile);
+}
+
+// Toggle event listener for light mode and dark mode
+toggleSlider.addEventListener('change', () => {
+    if (toggleSlider.checked) {
+        bod.classList.add('dark');
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        bod.classList.remove('dark');
+        localStorage.setItem('darkMode', 'disabled');
+    }
+});
+
+if (localStorage.getItem('darkMode') === 'enabled') {
+    bod.classList.add('dark');
+    toggle.checked = true;
+} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    bod.classList.add('dark');
+    toggle.checked = true;
+}
+
+// Mobile toggle for light-mode darkmode
+toggleSliderMobile.addEventListener('change', () => {
+    if (toggleSliderMobile.checked) {
+        bod.classList.add('dark');
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        bod.classList.remove('dark');
+        localStorage.setItem('darkMode', 'disabled');
+    }
+});
+
+if (localStorage.getItem('darkMode') === 'enabled') {
+    bod.classList.add('dark');
+    toggle.checked = true;
+} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    bod.classList.add('dark');
+    toggle.checked = true;
 }
 
 // Initialize the board initially there was 8 now there will be 6
