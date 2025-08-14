@@ -76,6 +76,8 @@ const delCancelBtn = document.getElementById('delete-canceled');
 const toggleSlider = document.getElementById('themeToggle');
 const bod = document.documentElement;
 const toggleSliderMobile = document.getElementById('themeToggle-mobile');
+const additionConfirmedBtn = document.getElementById('addition-confirmed');
+const addTaskConfirmDiag = document.getElementById('confirm-addition');
 
 // Modal input fields that are stored and showed
 const taskIdInput = document.getElementById('task-id');
@@ -214,6 +216,10 @@ function showDeleteConfirmationDialog() {
     document.body.style.overflow = 'hidden';
 }
 
+function showAdditionConfirmationDialog(){
+    addTaskConfirmDiag.classList.remove('hidden');
+}
+
 function deleteConfirmed(){
     deleteConfirmation.classList.add('hidden');
     document.body.style.overflow = '';
@@ -222,6 +228,10 @@ function deleteConfirmed(){
 
 function deleteCanceled(){
     deleteConfirmation.classList.add('hidden');
+}
+
+function additionConfirmedCloseDialog(){
+    addTaskConfirmDiag.classList.add('hidden');
 }
 
 // function to add new dask from the modal
@@ -236,6 +246,7 @@ function addTasksubmit(e) {
 
     if(validateInputs()){
         closeModal();
+        showAdditionConfirmationDialog();
         showSortedTasks();
     }
     
@@ -381,8 +392,9 @@ function saveTaskChanges(e) {
     
     // Refresh display
     // Refreshes the display and closes the modal
-    saveTask()
+    saveTask();
     closeModal();
+    showAdditionConfirmationDialog();
     showSortedTasks();
 }
 
@@ -461,6 +473,7 @@ function setupEventListeners() {
     deleteTaskBtn.addEventListener('click', deleteTaskConfirm);
     delConfirmBtn.addEventListener("click", deleteConfirmed);
     delCancelBtn.addEventListener("click", deleteCanceled);
+    additionConfirmedBtn.addEventListener("click", additionConfirmedCloseDialog);
 
 
     // Close modal when clicking on the ouside of it
