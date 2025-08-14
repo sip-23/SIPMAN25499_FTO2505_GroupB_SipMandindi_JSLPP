@@ -118,6 +118,9 @@ function createTaskElement(initialTasks) {
         taskElementCreated.setAttribute('data-id', initialTasks.id);
     }
     
+    taskElementCreated.setAttribute('data-id', initialTasks.id);
+    taskElementCreated.setAttribute('data-priority', initialTasks.priority); // For sorting
+
     return taskElementCreated;
     // Returns the created DOM element
 }
@@ -133,8 +136,15 @@ function showSortedTasks() {
     doingTasks.innerHTML = '';
     doneTasks.innerHTML = '';
 
+    // Sort all tasks by priority first (high to low), then by other criteria if needed
+    const sortedTasks = [...initialTasks].sort((a, b) => {
+        // creates a copy using  spread operator 
+        const priorityOrder = {high: 3, medium: 2, low: 1};
+        return priorityOrder[b.priority] - priorityOrder[a.priority];
+    });
+
     // Sort tasks into columns
-    initialTasks.forEach(task => {
+    sortedTasks.forEach(task => {
         const taskElement = createTaskElement(task);
         
     
@@ -511,6 +521,7 @@ if (localStorage.getItem('darkMode') === 'enabled') {
     bod.classList.add('dark');
     toggle.checked = true;
 }
+
 
 // Initialize the board initially there was 8 now there will be 6
 /**
