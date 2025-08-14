@@ -22,9 +22,9 @@
 <body class="h-screen font-plus-jakarta-sans overflow-hidden"> <!-- Set full viewport height and prevent scrolling -->
     <div class="flex flex-col lg:flex-row h-full group">
         <!-- Sidebar - Now visible on mobile with toggle functionality -->
-        <div class="sidebar w-full lg:w-[300px] bg-white border-r border-[#E4EBFA] lg:h-screen flex-shrink-0 transition-all duration-[1s] ease-in-out transform translate-x-0">
+        <div class="sidebar w-full lg:w-[300px] bg-white dark:bg-[#2B2C37] border-r border-[#E4EBFA] lg:h-screen flex-shrink-0 transition-all duration-[1s] ease-in-out transform translate-x-0">
             <div class="hidden lg:block lg:p-6">
-                <svg class="w-[152px] h-[25px]" viewBox="0 0 315 68" xmlns="http://www.w3.org/2000/svg" version="1.1" width="315" height="68">
+                <svg class="w-[152px] h-[25px] dark:hidden" viewBox="0 0 315 68" xmlns="http://www.w3.org/2000/svg" version="1.1" width="315" height="68">
                     <path d="M0 0 C103.95 0 207.9 0 315 0 C315 22.44 315 44.88 315 68 C211.05 68 107.1 68 0 68 C0 45.56 0 23.12 0 0 Z " fill="#FCFCFC" transform="translate(0,0)"/>
                     <path d="M0 0 C3.3 0 6.6 0 10 0 C10.33 4.95 10.66 9.9 11 15 C11.99 14.34 12.98 13.68 14 13 C20.05121941 12.06766397 25.47882267 12.01175561 30.5625 15.6875 C34.36659306 18.85348712 36.7361388 22.12206897 37.43359375 27.0859375 C37.44734345 38.66318786 37.44734345 38.66318786 33 44 C28.16199115 48.35866696 23.74916108 49.69410347 17.27734375 49.375 C14.34863931 48.89274335 12.30970535 47.84776428 10 46 C9.67 46.66 9.34 47.32 9 48 C6.03 48 3.06 48 0 48 C0 32.16 0 16.32 0 0 Z " fill="#0A0B1B" transform="translate(198,8)"/>
                     <path d="M0 0 C3.3 0 6.6 0 10 0 C10.33 8.25 10.66 16.5 11 25 C12.44375 23.39125 13.8875 21.7825 15.375 20.125 C21.75255945 13.01857662 21.75255945 13.01857662 24.6015625 12.8046875 C25.59929687 12.82789063 26.59703125 12.85109375 27.625 12.875 C29.12933594 12.90207031 29.12933594 12.90207031 30.6640625 12.9296875 C31.43492188 12.95289063 32.20578125 12.97609375 33 13 C31.42219077 16.71045247 29.09296752 19.29906384 26.375 22.25 C25.55773437 23.14203125 24.74046875 24.0340625 23.8984375 24.953125 C23.27195312 25.62859375 22.64546875 26.3040625 22 27 C23.63234149 31.6279572 26.06370065 35.59589261 28.625 39.75 C33 46.87615031 33 46.87615031 33 48 C29.07730584 48.84366768 25.88240803 49.12452448 22 48 C18.54710348 44.02084553 16.26892989 39.73289673 14 35 C13.01 35.66 12.02 36.32 11 37 C10.41651248 39.6556728 10.41651248 39.6556728 10.3125 42.625 C10.24675781 43.62789062 10.18101563 44.63078125 10.11328125 45.6640625 C10.07589844 46.43492188 10.03851563 47.20578125 10 48 C6.7 48 3.4 48 0 48 C0 32.16 0 16.32 0 0 Z " fill="#0C0C1D" transform="translate(86,8)"/>
@@ -40,7 +40,7 @@
                     <path d="M0 0 C-0.3125 2.875 -0.3125 2.875 -1 6 C-4.44107266 8.29404844 -5.96839809 8.26293056 -10 8 C-11 7 -11 7 -11.0625 4.4375 C-11.041875 3.633125 -11.02125 2.82875 -11 2 C-7.17679443 0.57741188 -4.08718695 -0.24042276 0 0 Z " fill="#F3F3F4" transform="translate(261,42)"/>
                 </svg>
 
-                <svg class="hidden" xmlns="http://www.w3.org/2000/svg" width="153" height="26" viewBox="0 0 153 26" fill="none">
+                <svg class="hidden dark:block w-[152px] h-[25px]" xmlns="http://www.w3.org/2000/svg" width="153" height="26" viewBox="0 0 153 26" fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M44.5598 25V19.656L46.4798 17.544L50.9278 25H56.3678L50.0638 14.568L56.3998 7.528H50.4798L44.5598 13.832V0.776001H39.7598V25H44.5598ZM63.9198 25.384C66.0958 25.384 67.8451 24.712 69.1678 23.368V25H73.6478V13.48C73.6478 12.2213 73.3331 11.1173 72.7038 10.168C72.0744 9.21867 71.1944 8.47733 70.0638 7.944C68.9331 7.41067 67.6318 7.144 66.1598 7.144C64.3038 7.144 62.6771 7.57067 61.2798 8.424C59.8824 9.27733 58.9278 10.4293 58.4158 11.88L62.2558 13.704C62.5544 12.936 63.0291 12.3173 63.6798 11.848C64.3304 11.3787 65.0824 11.144 65.9358 11.144C66.8318 11.144 67.5411 11.368 68.0638 11.816C68.5864 12.264 68.8478 12.8187 68.8478 13.48V13.96L64.0158 14.728C61.9251 15.0693 60.3678 15.72 59.3438 16.68C58.3198 17.64 57.8078 18.856 57.8078 20.328C57.8078 21.9067 58.3571 23.144 59.4558 24.04C60.5544 24.936 62.0424 25.384 63.9198 25.384ZM63.3758 21.416C63.7811 21.7147 64.2824 21.864 64.8798 21.864C66.0744 21.864 67.0344 21.4907 67.7598 20.744C68.4851 19.9973 68.8478 19.0907 68.8478 18.024V17.48L64.8798 18.184C64.1971 18.312 63.6744 18.5307 63.3118 18.84C62.9491 19.1493 62.7678 19.592 62.7678 20.168C62.7678 20.7013 62.9704 21.1173 63.3758 21.416ZM81.9678 25V14.792C81.9678 13.7893 82.2664 12.984 82.8638 12.376C83.4611 11.768 84.2291 11.464 85.1678 11.464C86.1064 11.464 86.8744 11.768 87.4718 12.376C88.0691 12.984 88.3678 13.7893 88.3678 14.792V25H93.1678V13.768C93.1678 12.4453 92.8904 11.288 92.3358 10.296C91.7811 9.304 91.0078 8.53067 90.0158 7.976C89.0238 7.42133 87.8664 7.144 86.5438 7.144C85.4344 7.144 84.4531 7.352 83.5998 7.768C82.7464 8.184 82.0958 8.81867 81.6478 9.672V7.528H77.1678V25H81.9678ZM110.704 24.168C109.36 24.9787 107.834 25.384 106.128 25.384C105.061 25.384 104.064 25.208 103.136 24.856C102.208 24.504 101.434 23.9973 100.816 23.336V25H96.3358V0.776001H101.136V9C102.373 7.76267 104.048 7.144 106.16 7.144C107.824 7.144 109.328 7.54933 110.672 8.36C112.016 9.17067 113.082 10.264 113.872 11.64C114.661 13.016 115.056 14.5573 115.056 16.264C115.056 17.9493 114.666 19.4853 113.888 20.872C113.109 22.2587 112.048 23.3573 110.704 24.168ZM105.552 21.064C104.25 21.064 103.189 20.6213 102.368 19.736C101.546 18.8507 101.136 17.6933 101.136 16.264C101.136 14.856 101.546 13.704 102.368 12.808C103.189 11.912 104.25 11.464 105.552 11.464C106.874 11.464 107.962 11.9173 108.816 12.824C109.669 13.7307 110.096 14.8773 110.096 16.264C110.096 17.672 109.669 18.824 108.816 19.72C107.962 20.616 106.874 21.064 105.552 21.064ZM128.528 23.368C127.205 24.712 125.456 25.384 123.28 25.384C121.402 25.384 119.914 24.936 118.816 24.04C117.717 23.144 117.168 21.9067 117.168 20.328C117.168 18.856 117.68 17.64 118.704 16.68C119.728 15.72 121.285 15.0693 123.376 14.728L128.208 13.96V13.48C128.208 12.8187 127.946 12.264 127.424 11.816C126.901 11.368 126.192 11.144 125.296 11.144C124.442 11.144 123.69 11.3787 123.04 11.848C122.389 12.3173 121.914 12.936 121.616 13.704L117.776 11.88C118.288 10.4293 119.242 9.27733 120.64 8.424C122.037 7.57067 123.664 7.144 125.52 7.144C126.992 7.144 128.293 7.41067 129.424 7.944C130.554 8.47733 131.434 9.21867 132.064 10.168C132.693 11.1173 133.008 12.2213 133.008 13.48V25H128.528V23.368ZM124.24 21.864C123.642 21.864 123.141 21.7147 122.736 21.416C122.33 21.1173 122.128 20.7013 122.128 20.168C122.128 19.592 122.309 19.1493 122.672 18.84C123.034 18.5307 123.557 18.312 124.24 18.184L128.208 17.48V18.024C128.208 19.0907 127.845 19.9973 127.12 20.744C126.394 21.4907 125.434 21.864 124.24 21.864ZM141.328 14.792V25H136.528V7.528H141.008V9.672C141.456 8.81867 142.106 8.184 142.96 7.768C143.813 7.352 144.794 7.144 145.904 7.144C147.226 7.144 148.384 7.42133 149.376 7.976C150.368 8.53067 151.141 9.304 151.696 10.296C152.25 11.288 152.528 12.4453 152.528 13.768V25H147.728V14.792C147.728 13.7893 147.429 12.984 146.832 12.376C146.234 11.768 145.466 11.464 144.528 11.464C143.589 11.464 142.821 11.768 142.224 12.376C141.626 12.984 141.328 13.7893 141.328 14.792Z" fill="white"/>
                     <rect y="1" width="6" height="25" rx="2" fill="#635FC7"/>
                     <rect opacity="0.75" x="9" y="1" width="6" height="25" rx="2" fill="#635FC7"/>
@@ -71,13 +71,13 @@
                     
                     <div class="mt-[62vh] controls">
                         <!-- Adding a toggle -->
-                        <div class="relative flex items-center justify-center cursor-pointer w-[251px] h-[48px] rounded-[6px] bg-[#F4F7FD] mt-4 mb-4 mx-auto">
+                        <div class="relative flex items-center justify-center cursor-pointer w-[251px] h-[48px] rounded-[6px] bg-[#F4F7FD] dark:bg-[#635FC7] mt-4 mb-4 mx-auto">
                             <svg class="ml-[70px]" xmlns="http://www.w3.org/2000/svg" width="19" height="19">
                                 <text x="2" y="15" font-size="14" fill="#828FA3">🌞</text>
                             </svg>
-                            <label class="toggle group relative inline-flex items-center w-[40px] h-[20px] shrink-0 rounded-full bg-[#635FC7] p-px mx-auto inset-ring inset-ring-gray-900/5 outline-offset-2 outline-indigo-600 transition-colors duration-200 ease-in-out has-checked:bg-indigo-600 has-focus-visible:outline-2">
-                                <input id="themeToggleMobile" type="checkbox" name="light-dark-mode-toggle" aria-label="toggle" class="sr-only peer" />
-                                <div class="w-[40px] h-[20px] bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#635FC7]"></div>
+                            <label id="themeToggleDesktop" class="toggle-switch relative inline-flex items-center w-[40px] h-[20px] shrink-0 rounded-full bg-[#635FC7] p-px mx-auto">
+                                <div class="absolute mt-0 ml-0 mr-0 mb-0 rounded-full bg-[#635FC7] dark:bg-[#20212C] duration-300 ease-in-out"></div>
+                                <div class="w-[20px] h-[20px] absolute bg-white rounded-full shadow-sm transition-all duration-300 ease-in-out translate-x-5 bg-white"></div>
                             </label>
                             <svg class="mr-[70px]" xmlns="http://www.w3.org/2000/svg" width="19" height="19">
                                 <text x="2" y="15" font-size="14" fill="#828FA3">🌚</text>
@@ -86,8 +86,8 @@
 
                         <!-- Adding the Show/hide sidebar button -->
                         <!-- Hide the Button -->
-                        <button id="hideSidebar" class="flex justify-start items-center font-plus-jakarta-sans py-3 lg:-mx-6 w-[267px] h-[50px] rounded-r-full bg-[#F4F7FD] text-[#635FC7] font-bold text-base transition-colors hover:bg-[#A8A4FF] hover:text-white">
-                            <svg class="ml-8 mr-[50px]" xmlns="http://www.w3.org/2000/svg" width="19" height="19">
+                        <button id="hideSidebar" class="flex justify-start items-center font-plus-jakarta-sans py-3 lg:-mx-6 w-[267px] h-[50px] rounded-r-full bg-[#F4F7FD] dark:bg-[#635FC7] text-[#635FC7] dark:text-white font-bold text-base transition-colors hover:bg-[#A8A4FF] hover:text-white">
+                            <svg class="ml-8 mr-[50px] bg-[#F4F7FD] dark:bg-[#635FC7]" xmlns="http://www.w3.org/2000/svg" width="19" height="19">
                                 <text x="2" y="15" font-size="14" fill="#828FA3">🚫</text>
                             </svg>
                             Hide Sidebar
@@ -102,12 +102,12 @@
         <!-- Main Content Area -->
         <div class="flex-1 flex flex-col overflow-hidden">
             <!-- Header -->
-            <header class="relative lg:block bg-white border-b border-[#E4EBFA] p-4">
+            <header class="relative lg:block bg-white dark:bg-[#2B2C37]  border-b border-[#E4EBFA] p-4">
                 <div class="flex justify-between items-center">
-                    <h2 class="hidden lg:block lg:font-plus-jakarta-sans lg:font-bold lg:text-2xl">Launch Career</h2>
+                    <h2 class="hidden lg:block lg:font-plus-jakarta-sans dark:text-white lg:font-bold lg:text-2xl">Launch Career</h2>
           
                     <!-- Add Task Button  -->
-                    <button id="mobileSidebarBtn" commandfor="drawer" class="w-[24px] h-[25px] bg-transparent">
+                    <button id="mobileSidebarBtn" commandfor="drawer" class="w-[24px] h-[25px] bg-transparent dark:bg-[#2B2C37]">
                         <svg class="w-[24px] h-[25px] lg:hidden " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="141px" height="150px" viewBox="0 0 49 52" version="1.1">
                             <g id="surface1">
                                 <path style=" stroke:none;fill-rule:nonzero;fill:rgb(99.607843%,99.607843%,100%);fill-opacity:1;" d="M 0.25 20 C 0.25 13.332031 0.25 6.792969 0.25 0.25 C 16.582031 0.25 32.917969 0.25 49.25 0.25 C 49.25 17.582031 49.25 34.917969 49.25 52.25 C 32.917969 52.25 16.582031 52.25 0.25 52.25 C 0.25 41.542969 0.25 30.832031 0.25 20 M 3.878906 50.292969 C 5.503906 50.5 7.128906 50.839844 8.757812 50.882812 C 12.265625 50.972656 13.660156 49.511719 13.660156 45.984375 C 13.660156 34.820312 13.660156 23.660156 13.660156 12.5 C 13.660156 10.542969 13.683594 8.582031 13.652344 6.628906 C 13.609375 4.171875 11.988281 2.570312 9.554688 2.539062 C 8.429688 2.523438 7.304688 2.523438 6.179688 2.539062 C 3.652344 2.566406 2.023438 4.160156 2.019531 6.675781 C 2.007812 20.042969 2.015625 33.414062 2.011719 46.78125 C 2.011719 48.210938 2.511719 49.375 3.878906 50.292969 M 43.8125 50.964844 C 46.972656 50.886719 48.472656 49.371094 48.472656 46.246094 C 48.476562 41.082031 48.476562 35.917969 48.476562 30.75 C 48.476562 22.796875 48.480469 14.839844 48.472656 6.886719 C 48.46875 4.191406 46.796875 2.535156 44.101562 2.519531 C 43.101562 2.511719 42.101562 2.507812 41.105469 2.519531 C 38.410156 2.542969 36.78125 4.1875 36.769531 6.910156 C 36.757812 9.117188 36.765625 11.324219 36.765625 13.53125 C 36.765625 24.527344 36.761719 35.523438 36.769531 46.519531 C 36.773438 49.257812 38.355469 50.875 41.078125 50.960938 C 41.910156 50.984375 42.746094 50.964844 43.8125 50.964844 M 19.472656 15.125 C 19.472656 25.65625 19.46875 36.191406 19.472656 46.722656 C 19.476562 49.34375 20.941406 50.792969 23.574219 50.816406 C 24.738281 50.824219 25.90625 50.832031 27.070312 50.8125 C 29.445312 50.777344 31.003906 49.269531 31.003906 46.917969 C 31.019531 33.472656 31.019531 20.023438 31.003906 6.578125 C 31.003906 4.191406 29.414062 2.609375 27.011719 2.535156 C 25.804688 2.5 24.597656 2.507812 23.390625 2.535156 C 21.089844 2.589844 19.488281 4.214844 19.476562 6.507812 C 19.460938 9.296875 19.472656 12.085938 19.472656 15.125 Z M 19.472656 15.125 "/>
@@ -128,10 +128,10 @@
             </header>
             
             <!-- main content area for task columns. -->
-            <main class="flex-1 overflow-auto bg-[#F4F7FD] font-plus-jakarta-sans lg:flex">
+            <main class="flex-1 overflow-auto bg-[#F4F7FD] dark:bg-[#20212C] font-plus-jakarta-sans lg:flex">
                 
                 <div id="drawer" class="hidden absolute inset-x-0 w-full h-full bg-black bg-opacity-50 flex items-start justify-center z-50 lg:hidden">
-                    <div class="flex-1 flex flex-col bg-white py-6 shadow-xl max-w-[340px] h-[200px] border-r rounded-[8px] border-[#E4EBFA] flex-shrink-0 transition-all duration-[1s] ease-in-out transform translate-y-0 ">
+                    <div class="flex-1 flex flex-col bg-white dark:bg-[#2B2C37] py-6 shadow-xl max-w-[340px] h-[200px] border-r dark:border-[#2B2C37] rounded-[8px] border-[#E4EBFA] flex-shrink-0 transition-all duration-[1s] ease-in-out transform translate-y-0 ">
                         <div class="px-12 flex justify-between items-start">
                             <div class="flex">
                                 <h4 class="font-plus-jakarta-sans text-gray-500 font-bold text-xs tracking-wider mr-2">ALL BOARDS</h4>
@@ -154,13 +154,13 @@
                             </button>
 
                             <!-- Adding a toggle -->
-                            <div class="relative flex items-center justify-center cursor-pointer w-[251px] h-[48px] rounded-[6px] bg-[#F4F7FD] mt-4 mb-4 mx-auto">
+                            <div class="relative flex items-center justify-center cursor-pointer w-[251px] h-[48px] rounded-[6px] bg-[#F4F7FD] dark:bg-[#635fc7] mt-4 mb-4 mx-auto">
                                 <svg class="ml-[70px]" xmlns="http://www.w3.org/2000/svg" width="19" height="19">
                                     <text x="2" y="15" font-size="14" fill="#828FA3">🌞</text>
                                 </svg>
-                                <label class="toggle group relative inline-flex items-center w-[40px] h-[20px] shrink-0 rounded-full bg-[#635FC7] p-px mx-auto inset-ring inset-ring-gray-900/5 outline-offset-2 outline-indigo-600 transition-colors duration-200 ease-in-out has-checked:bg-indigo-600 has-focus-visible:outline-2">
-                                    <input id="themeToggleMobile" type="checkbox" name="light-dark-mode-toggle" aria-label="toggle" class="sr-only peer" />
-                                    <div class="w-[40px] h-[20px] bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-5 peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#635FC7]"></div>
+                                <label id="themeToggleMobile" class="toggle-switch relative inline-flex items-center w-[40px] h-[20px] shrink-0 rounded-full bg-[#635FC7] p-px mx-auto">
+                                    <div class="absolute mt-0 ml-0 mr-0 mb-0 rounded-full bg-[#635FC7] dark:bg-[#20212C] transition-colors duration-300 ease-in-out"></div>
+                                    <div class="w-[20px] h-[20px] absolute bg-white rounded-full shadow-sm transition-all duration-300 ease-in-out translate-x-5 bg-white"></div>
                                 </label>
                                 <svg class="mr-[70px]" xmlns="http://www.w3.org/2000/svg" width="19" height="19">
                                     <text x="2" y="15" font-size="14" fill="#828FA3">🌚</text>
@@ -170,27 +170,27 @@
                     </div>
                 </div>
 
-                <div class="flex-1 overflow-auto bg-[#F4F7FD] font-plus-jakarta-sans lg:flex p-4">
+                <div class="flex-1 overflow-auto bg-[#F4F7FD] dark:bg-[#20212C] font-plus-jakarta-sans lg:flex p-4">
                     <!-- Task columns -->
                     <div id="todo-column" class="column flex flex-col lg:flex mb-4">
                         <div class="flex justify-start items-center mt-2 font-plus-jakarta-sans text-[#828FA3] font-bold not-italic text-xs leading-[100%] tracking-[2.4px]">
-                            <span class="h-[15px] w-[15px] rounded-full block bg-[#49c4e5]"></span>
+                            <span class="ml-2 h-[15px] w-[15px] rounded-full block bg-[#49c4e5]"></span>
                             <h4 class="ml-2">TODO</h4>
                             <span class="ml-2">(4)</span>
                         </div>
                         <!-- Tasks container for TODO -->
                         <ul id="todo-tasks" class="flex flex-col font-bold text-[15px] leading-[100%] tracking-[0px] rotate-0 opacity-100 ml-2 mt-2">
-                            <li class="mt-4 py-5 px-3 mr-2 w-max-[320px] lg:w-[280px] h-[60px] bg-white rounded-lg shadow-[0px_4px_6px_0px_rgba(54,78,126,0.1)] transition-all hover:shadow-md">Launch Epic Career 🚀</li>
-                            <li class="mt-4 py-5 px-3 mr-2 w-max-[320px] lg:w-[280px] h-[60px] bg-white rounded-lg shadow-[0px_4px_6px_0px_rgba(54,78,126,0.1)] transition-all hover:shadow-md">Conquer React ⚛️</li>
-                            <li class="mt-4 py-5 px-3 mr-2 w-max-[320px] lg:w-[280px] h-[60px] bg-white rounded-lg shadow-[0px_4px_6px_0px_rgba(54,78,126,0.1)] transition-all hover:shadow-md">Understand Databases ⚙️</li>
-                            <li class="mt-4 py-5 px-3 mr-2 w-max-[320px] lg:w-[280px] h-[60px] bg-white rounded-lg shadow-[0px_4px_6px_0px_rgba(54,78,126,0.1)] transition-all hover:shadow-md">Crush Frameworks 🖼️</li>
+                            <li class="mt-4 py-5 px-3 mr-2 w-max-[320px] lg:w-[280px] h-[60px] bg-white dark:bg-[#2B2C37] rounded-lg shadow-[0px_4px_6px_0px_rgba(54,78,126,0.1)] transition-all hover:shadow-md">Launch Epic Career 🚀</li>
+                            <li class="mt-4 py-5 px-3 mr-2 w-max-[320px] lg:w-[280px] h-[60px] bg-white dark:bg-[#2B2C37] rounded-lg shadow-[0px_4px_6px_0px_rgba(54,78,126,0.1)] transition-all hover:shadow-md">Conquer React ⚛️</li>
+                            <li class="mt-4 py-5 px-3 mr-2 w-max-[320px] lg:w-[280px] h-[60px] bg-white dark:bg-[#2B2C37] rounded-lg shadow-[0px_4px_6px_0px_rgba(54,78,126,0.1)] transition-all hover:shadow-md">Understand Databases ⚙️</li>
+                            <li class="mt-4 py-5 px-3 mr-2 w-max-[320px] lg:w-[280px] h-[60px] bg-white dark:bg-[#2B2C37] rounded-lg shadow-[0px_4px_6px_0px_rgba(54,78,126,0.1)] transition-all hover:shadow-md">Crush Frameworks 🖼️</li>
                         </ul>
                     </div>
 
                     <!-- DOING Column -->
                     <div id="doing-column" class="column flex flex-col lg:flex mb-4">
                         <div class="flex justify-start items-center mt-2 font-plus-jakarta-sans text-[#828FA3] font-bold not-italic text-xs leading-[100%] tracking-[2.4px]">
-                            <span class="h-[15px] w-[15px] rounded-full block bg-[#8471f2] "></span>
+                            <span class="ml-2 h-[15px] w-[15px] rounded-full block bg-[#8471f2] "></span>
                             <h4 class="ml-2">DOING</h4>
                             <span class="ml-2">(2)</span>
                         </div>
@@ -204,7 +204,7 @@
                     <!-- DONE Column -->
                     <div id="done-column" class="column flex flex-col lg:flex mb-4">
                         <div class="flex justify-start items-center mt-2 font-plus-jakarta-sans text-[#828FA3] font-bold not-italic text-xs leading-[100%] tracking-[2.4px]">
-                            <span class="h-[15px] w-[15px] rounded-full block bg-[#219c90] "></span>
+                            <span class="ml-2 h-[15px] w-[15px] rounded-full block bg-[#219c90] "></span>
                             <h4 class="ml-2">DONE</h4>
                             <span class="ml-2">(2)</span>
                         </div>
@@ -228,9 +228,9 @@
 
     <!-- The New task model -->
     <div class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" id="task-modal">
-        <div class="bg-white rounded-lg p-8 max-w-md mx-3 w-[479px] h-[587px] rounded-[6px] opacity-100 transform-none">
+        <div class="bg-white dark:bg-[#2B2C37]  rounded-lg p-8 max-w-md mx-3 w-[479px] h-[587px] rounded-[6px] opacity-100 transform-none">
             <div class="modal-actions flex justify-between items-center mb-3">
-                <h2 id="modal-title" class="text-lg font-bold font-plus-jakarta-sans leading-none tracking-normal text-[#000112] w-[123px] h-[23px] opacity-100">Add New Task</h2>
+                <h2 id="modal-title" class="text-lg font-bold font-plus-jakarta-sans leading-none tracking-normal text-[#000112] dark:text-white w-[123px] h-[23px] opacity-100">Add New Task</h2>
                 <button type="button" class="text-4xl font-extrablack h-7 w-7 font-black text-[#EA5555] dark:text-[#EA5555] hover:text-red-900" id="cancel-btn">
                     <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
                         <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
@@ -240,18 +240,18 @@
             <form id="task-form">
                 <input type="hidden" id="task-id">
                 <div class="form-group mb-4">
-                    <label for="task-title" class="block text-sm font-medium font-plus-jakarta-sans text-gray-700 mb-1">Title</label>
+                    <label for="task-title" class="block text-sm font-medium font-plus-jakarta-sans text-[#828FA3] mb-1">Title</label>
                     <input type="text" id="task-title" placeholder="eg. I want to take a chilled break" class="w-full text-[13px] font-medium font-plus-jakarta-sans px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-600">
                     <div id="task-title-error" class="error-message hidden mt-2 px-2 py-2 text-sm text-[#828FA3] w-[190px] h-[48px] opacity-100 rounded-lg shadow-[0px_10px_20px_0px_rgba(54,78,126,0.25)]"></div>
                 </div>
                 <div class="form-group mb-4">
-                    <label for="task-description" class="block text-sm font-plus-jakarta-sans font-medium text-gray-700 mb-1">Description</label>
+                    <label for="task-description" class="block text-sm font-plus-jakarta-sans font-medium text-[#828FA3] mb-1">Description</label>
                     <textarea id="task-description" placeholder="e.g Pet your dog, have a cup of coffee, dance to your favourite song and come back to crush this challenge." class="w-full text-[13px] font-medium px-3 font-plus-jakarta-sans py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-600 h-24"></textarea>
                     <div id="task-description-error" class="error-message hidden mt-2 px-2 py-2 text-sm text-[#828FA3] w-[190px] h-[48px] opacity-100 rounded-lg shadow-[0px_10px_20px_0px_rgba(54,78,126,0.25)]"></div>
                 </div>
                 
                 <div class="form-group relative mb-6">
-                    <label for="task-status" class="block text-sm font-medium font-plus-jakarta-sans text-gray-700 mb-1">Status</label>
+                    <label for="task-status" class="block text-sm font-medium font-plus-jakarta-sans text-[#828FA3] mb-1">Status</label>
                     <select id="task-status" class="w-full px-2 py-2 font-plus-jakarta-sans text-[13px] font-medium border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-600 text-[#000112] [&>option:checked]:text-black">
                         <option class="bg-white text-[13px] font-medium text-gray-400 hover:bg-gray-900" value="todo">todo</option>
                         <option class="bg-white text-[13px] font-medium text-gray-400 hover:bg-gray-900" value="doing">doing</option>
@@ -261,7 +261,7 @@
                 </div>
 
                 <div class="form-group relative mb-6">
-                    <label for="task-priority" class="block text-sm font-medium font-plus-jakarta-sans text-gray-700 mb-1">Priority</label>
+                    <label for="task-priority" class="block text-sm font-medium font-plus-jakarta-sans text-[#828FA3] mb-1">Priority</label>
                     <select id="task-priority" class="w-full px-2 py-2 font-plus-jakarta-sans border text-[13px] font-medium border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-600 text-[#000112] [&>option:checked]:text-black">
                         <option class="bg-white text-[13px] font-medium text-gray-400 hover:bg-gray-900" value="low">low</option>
                         <option class="bg-white text-[13px] font-medium text-gray-400 hover:bg-gray-900" value="medium">medium</option>
@@ -280,9 +280,9 @@
 
     <!-- The Update and Delete model -->
     <div class="Edit-modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-100" id="edit-task-modal">
-        <div class="bg-white rounded-lg p-8 max-w-md mx-3 w-[479px] h-[590px] lg:h-[556px] rounded-[6px] opacity-100 transform-none">
+        <div class="bg-white dark:bg-[#2B2C37] rounded-lg p-8 max-w-md mx-3 w-[479px] h-[590px] lg:h-[556px] rounded-[6px] opacity-100 transform-none">
             <div class="Edit-modal-actions flex justify-between items-center mb-3">
-                <h2 id="Edit-modal-title" class="text-lg font-bold font-plus-jakarta-sans leading-none tracking-normal text-[#000112] w-[123px] h-[23px] opacity-100">Task</h2>
+                <h2 id="Edit-modal-title" class="text-lg font-bold font-plus-jakarta-sans leading-none tracking-normal text-[#000112] dark:text-white w-[123px] h-[23px] opacity-100">Task</h2>
                 <button type="button" class="flex justify-end items-center py-2 text-3xl h-6 w-6 text-lg font-bold text-[#EA5555] dark:text-[#EA5555] font-extrablack text-[#EA5555] hover:text-red-900" id="edit-cancel-btn">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
                         <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
@@ -292,19 +292,19 @@
             <form id="edit-task-form">
                 <input type="hidden" id="task-id">
                 <div class="Edit-form-group mb-4">
-                    <label for="task-title" class="block text-sm font-medium font-plus-jakarta-sans text-gray-700 mb-1">Title</label>
+                    <label for="task-title" class="block text-sm font-medium font-plus-jakarta-sans text-[#828FA3] mb-1">Title</label>
                     <input type="text" id="edit-task-title" required  class="w-full text-[13px] font-medium font-plus-jakarta-sans px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-600">
                     <div class="error"></div>
                 </div>
                 
                 <div class="Edit-form-group mb-4">
-                    <label for="task-description" class="block text-sm font-plus-jakarta-sans  font-medium text-gray-700 mb-1">Description</label>
+                    <label for="task-description" class="block text-sm font-plus-jakarta-sans  font-medium text-[#828FA3] mb-1">Description</label>
                     <textarea id="edit-task-description" required class="w-full px-3 text-[13px] font-medium font-plus-jakarta-sans  py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-600 h-24"></textarea>
                     <div class="error"></div>
                 </div>
 
                 <div class="Edit-form-group relative mb-6">
-                    <label for="task-status" class="block text-sm font-medium font-plus-jakarta-sans text-gray-700 mb-1">Status</label>
+                    <label for="task-status" class="block text-sm font-medium font-plus-jakarta-sans text-[#828FA3] mb-1">Status</label>
                     <select id="edit-task-status" required class="w-full px-2 py-2 font-plus-jakarta-sans border text-[13px] font-medium border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-600 text-[#000112] [&>option:checked]:text-black">
                         <option class="bg-white text-[13px] font-medium text-gray-400 hover:bg-gray-900" value="todo">todo</option>
                         <option class="bg-white text-[13px] font-medium text-gray-400 hover:bg-gray-900" value="doing">doing</option>
@@ -314,7 +314,7 @@
                 </div>
 
                 <div class="Edit-form-group relative mb-6">
-                    <label for="task-priority" class="block text-sm font-medium font-plus-jakarta-sans text-gray-700 mb-1">Priority</label>
+                    <label for="task-priority" class="block text-sm font-medium font-plus-jakarta-sans text-[#828FA3] mb-1">Priority</label>
                     <select id="edit-task-priority" class="w-full px-2 py-2 font-plus-jakarta-sans border text-[13px] font-medium border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-600 text-[#000112] [&>option:checked]:text-black">
                         <option class="bg-white text-[13px] font-medium text-gray-400 hover:bg-gray-900" value="low">low</option>
                         <option class="bg-white text-[13px] font-medium text-gray-400 hover:bg-gray-900" value="medium">medium</option>
@@ -336,7 +336,7 @@
     </div>
     <!-- Delete Confirmation element -->
     <div id="confirm" class="hidden fixed inset-0 w-full h-full bg-black/50 flex items-center justify-center z-[1000] overflow-y-auto">
-        <div class="relative mx-4 my-8 w-full max-w-lg transform overflow-hidden rounded-lg bg-white dark:bg-gray-800 text-left shadow-xl outline outline-1 outline-gray-200 dark:outline-white/10 transition-all sm:mx-auto sm:my-8 sm:w-full">
+        <div class="relative mx-4 my-8 w-full max-w-lg transform overflow-hidden rounded-lg bg-white dark:bg-[#2B2C37] text-left shadow-xl outline outline-1 outline-gray-200 dark:outline-white/10 transition-all sm:mx-auto sm:my-8 sm:w-full">
             <div class="bg-white dark:bg-gray-800 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div class="sm:flex sm:items-start">
                     <div class="mx-auto flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#EA5555] dark:bg-[#EA5555] sm:mx-0 sm:h-10 sm:w-10">
