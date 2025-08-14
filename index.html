@@ -75,9 +75,10 @@
                             <svg class="ml-[70px]" xmlns="http://www.w3.org/2000/svg" width="19" height="19">
                                 <text x="2" y="15" font-size="14" fill="#828FA3">🌞</text>
                             </svg>
-                            <label id="themeToggleDesktop" class="toggle-switch relative inline-flex items-center w-[40px] h-[20px] shrink-0 rounded-full bg-[#635FC7] p-px mx-auto">
-                                <div class="absolute mt-0 ml-0 mr-0 mb-0 rounded-full bg-[#635FC7] dark:bg-[#20212C] duration-300 ease-in-out"></div>
-                                <div class="w-[20px] h-[20px] absolute bg-white rounded-full shadow-sm transition-all duration-300 ease-in-out translate-x-5 bg-white"></div>
+                            <label id="themeToggleDesktop" class="toggle relative inline-flex items-center w-[40px] h-[20px] shrink-0 cursor-pointer mx-auto">
+                                <input type="checkbox" id="themeToggle" class="absolute opacity-0 w-0 h-0 peer" />
+                                <div class="slider absolute top-0 left-0 right-0 bottom-0 rounded-full bg-[#635FC7] dark:bg-[#20212C] transition-colors duration-300 ease-in-out peer-checked:bg-[#635FC7]"></div>
+                                <div class="absolute h-[14px] w-[14px] left-[3px] bottom-[3px] bg-white rounded-full transition-all duration-300 ease-in-out peer-checked:translate-x-[20px]"></div>
                             </label>
                             <svg class="mr-[70px]" xmlns="http://www.w3.org/2000/svg" width="19" height="19">
                                 <text x="2" y="15" font-size="14" fill="#828FA3">🌚</text>
@@ -118,7 +119,7 @@
                         </svg>
                     </button>
 
-                    <button id="addTaskButton" class="flex items-center justify-center bg-[#635fc7] hover:bg-[#A8A4FF] text-white font-medium py-3 px-4 rounded-full transition-colors">
+                    <button id="addTaskButton" class="flex items-center justify-center bg-[#635fc7] hover:bg-[#A8A4FF] text-white font-medium py-3 px-4 rounded-full  transition-colors mr-[22px] lg:mr-[61px]">
                         <svg class="h-4 w-4 text-white" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="m11 11h-7.25c-.414 0-.75.336-.75.75s.336.75.75.75h7.25v7.25c0 .414.336.75.75.75s.75-.336.75-.75v-7.25h7.25c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-7.25v-7.25c0-.414-.336-.75-.75-.75s-.75.336-.75.75z" fill="currentColor"/>
                         </svg>
@@ -158,9 +159,10 @@
                                 <svg class="ml-[70px]" xmlns="http://www.w3.org/2000/svg" width="19" height="19">
                                     <text x="2" y="15" font-size="14" fill="#828FA3">🌞</text>
                                 </svg>
-                                <label id="themeToggleMobile" class="toggle-switch relative inline-flex items-center w-[40px] h-[20px] shrink-0 rounded-full bg-[#635FC7] p-px mx-auto">
-                                    <div class="absolute mt-0 ml-0 mr-0 mb-0 rounded-full bg-[#635FC7] dark:bg-[#20212C] transition-colors duration-300 ease-in-out"></div>
-                                    <div class="w-[20px] h-[20px] absolute bg-white rounded-full shadow-sm transition-all duration-300 ease-in-out translate-x-5 bg-white"></div>
+                                <label id="themeToggleMobile" class="toggle relative inline-flex items-center w-[40px] h-[20px] shrink-0 cursor-pointer mx-auto">
+                                    <input type="checkbox" id="themeToggle" class="absolute opacity-0 w-0 h-0 peer" />
+                                    <div class="slider absolute top-0 left-0 right-0 bottom-0 rounded-full bg-[#635FC7] dark:bg-[#20212C] transition-colors duration-300 ease-in-out peer-checked:bg-[#635FC7]"></div>
+                                    <div class="absolute h-[14px] w-[14px] left-[3px] bottom-[3px] bg-white rounded-full transition-all duration-300 ease-in-out peer-checked:translate-x-[20px]"></div>
                                 </label>
                                 <svg class="mr-[70px]" xmlns="http://www.w3.org/2000/svg" width="19" height="19">
                                     <text x="2" y="15" font-size="14" fill="#828FA3">🌚</text>
