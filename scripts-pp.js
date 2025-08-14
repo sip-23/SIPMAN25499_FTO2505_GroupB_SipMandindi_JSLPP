@@ -7,21 +7,21 @@ const initialTasks = JSON.parse(localStorage.getItem('initialTasks')) || [
     title: "Launch Epic Career 🚀",
     description: "Create a killer Resume",
     status: "todo",
-    priority: "medium"
+    priority: "medium",
   },
   {
     id: 2,
     title: "Master JavaScript 💛",
     description: "Get comfortable with the fundamentals",
     status: "doing",
-    priority: "low"
+    priority: "low",
   },
   {
     id: 3,
     title: "Keep on Going 🏆",
     description: "You're almost there",
     status: "doing",
-    priority: "medium"
+    priority: "medium",
   },
 
   {
@@ -30,7 +30,7 @@ const initialTasks = JSON.parse(localStorage.getItem('initialTasks')) || [
     description:
       "Study fundamental data structures and algorithms to solve coding problems efficiently",
     status: "todo",
-    priority: "low"
+    priority: "low",
   },
   {
     id: 5,
@@ -38,7 +38,7 @@ const initialTasks = JSON.parse(localStorage.getItem('initialTasks')) || [
     description:
       "Gain practical experience and collaborate with others in the software development community",
     status: "done",
-    priority: "high"
+    priority: "high",
   },
   {
     id: 6,
@@ -46,7 +46,7 @@ const initialTasks = JSON.parse(localStorage.getItem('initialTasks')) || [
     description:
       "Create a portfolio showcasing your skills and projects to potential employers",
     status: "done",
-    priority: "high"
+    priority: "high",
   },
 ];
 
@@ -96,22 +96,22 @@ let currentTask = null;
  */
 function createTaskElement(initialTasks) {
     const taskElementCreated = document.createElement("li"); // Creates an HTML list item element for a task
-    
+
 
     if(initialTasks.priority === 'low') {
-        taskElementCreated.className = 'task mt-4 py-5 px-3 mr-2 w-max-[320px] xl:w-[280px] h-[60px] bg-white rounded-lg shadow-[0px_4px_6px_0px_rgba(54,78,126,0.1)] transition-all hover:shadow-md flex justify-between items-center';
+        taskElementCreated.className = 'task flex mt-4 py-5 px-3 mr-2 w-max-[320px] xl:w-[280px] h-[60px] bg-white rounded-lg shadow-[0px_4px_6px_0px_rgba(54,78,126,0.1)] transition-all hover:shadow-md flex justify-between items-center';
         // Sets appropriate classes for styling and also creates a className for the new class
-        taskElementCreated.innerHTML = `<h3 class="font-bold">${initialTasks.title} <span class="flex justify-end inline h-[15px] w-[15px]">🟢</span></h3>`;
+        taskElementCreated.innerHTML = `<h3 class="font-bold">${initialTasks.title}</h3><span class="flex justify-end inline h-[15px] w-[15px]">🟢</span>`;
         taskElementCreated.setAttribute('data-id', initialTasks.id);
-    } if (initialTasks.priority === 'medium') {
-        taskElementCreated.className = 'task flex mt-4 py-5 px-3 mr-2 w-max-[320px] xl:w-[280px] h-[60px] bg-white rounded-lg shadow-[0px_4px_6px_0px_rgba(54,78,126,0.1)] transition-all hover:shadow-md';
+    } else if (initialTasks.priority === 'medium') {
+        taskElementCreated.className = 'task flex mt-4 py-5 px-3 mr-2 w-max-[320px] xl:w-[280px] h-[60px] bg-white rounded-lg shadow-[0px_4px_6px_0px_rgba(54,78,126,0.1)] transition-all hover:shadow-md flex justify-between items-center';
         // Sets appropriate classes for styling and also creates a className for the new class
-        taskElementCreated.innerHTML = `<h3 class="font-bold">${initialTasks.title} <span class="flex justify-end inline h-[15px] w-[15px]">🟠</span></h3>`;
+        taskElementCreated.innerHTML = `<h3 class="font-bold">${initialTasks.title} </h3><span class="flex justify-end inline h-[15px] w-[15px]">🟠</span>`;
         taskElementCreated.setAttribute('data-id', initialTasks.id);
     } else {
-        taskElementCreated.className = 'task flex mt-4 py-5 px-3 mr-2 w-max-[320px] xl:w-[280px] h-[60px] bg-white rounded-lg shadow-[0px_4px_6px_0px_rgba(54,78,126,0.1)] transition-all hover:shadow-md';
+        taskElementCreated.className = 'task flex mt-4 py-5 px-3 mr-2 w-max-[320px] xl:w-[280px] h-[60px] bg-white rounded-lg shadow-[0px_4px_6px_0px_rgba(54,78,126,0.1)] transition-all hover:shadow-md flex justify-between items-center';
         // Sets appropriate classes for styling and also creates a className for the new class
-        taskElementCreated.innerHTML = `<h3 class="font-bold">${initialTasks.title} <span class="flex justify-end inline h-[15px] w-[15px]">🔴</span></h3>`;
+        taskElementCreated.innerHTML = `<h3 class="font-bold">${initialTasks.title} </h3><span class="flex justify-end inline h-[15px] w-[15px]">🔴</span>`;
         taskElementCreated.setAttribute('data-id', initialTasks.id);
     }
     
