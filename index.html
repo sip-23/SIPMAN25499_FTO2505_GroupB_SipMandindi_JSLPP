@@ -247,15 +247,15 @@
             </div>
             <form id="task-form">
                 <input type="hidden" id="task-id">
-                <div class="form-group mb-4">
+                <div class="form-group mb-4 relative">
                     <label for="task-title" class="block text-sm font-medium font-plus-jakarta-sans text-[#828FA3] mb-1">Title</label>
                     <input type="text" id="task-title" placeholder="eg. I want to take a chilled break" class="w-full text-[13px] font-medium font-plus-jakarta-sans px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-600">
-                    <div id="task-title-error" class="error-message hidden mt-2 px-2 py-2 text-sm text-[#828FA3] w-[190px] h-[48px] opacity-100 rounded-lg shadow-[0px_10px_20px_0px_rgba(54,78,126,0.25)]"></div>
+                    <div id="task-title-error" class="error-message absolute z-10 hidden mt-2 px-2 py-2 text-sm text-[#828FA3] w-[190px] h-[48px] opacity-100 rounded-lg shadow-[0px_10px_20px_0px_rgba(54,78,126,0.25)] bg-white"></div>
                 </div>
-                <div class="form-group mb-4">
+                <div class="form-group mb-4 relative">
                     <label for="task-description" class="block text-sm font-plus-jakarta-sans font-medium text-[#828FA3] mb-1">Description</label>
                     <textarea id="task-description" placeholder="e.g Pet your dog, have a cup of coffee, dance to your favourite song and come back to crush this challenge." class="w-full text-[13px] font-medium px-3 font-plus-jakarta-sans py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-600 h-24"></textarea>
-                    <div id="task-description-error" class="error-message hidden mt-2 px-2 py-2 text-sm text-[#828FA3] w-[190px] h-[48px] opacity-100 rounded-lg shadow-[0px_10px_20px_0px_rgba(54,78,126,0.25)]"></div>
+                    <div id="task-description-error" class="error-message absolute z-10 hidden mt-2 px-2 py-2 text-sm text-[#828FA3] w-[190px] h-[48px] opacity-100 rounded-lg shadow-[0px_10px_20px_0px_rgba(54,78,126,0.25)] bg-white"></div>
                 </div>
                 
                 <div class="form-group relative mb-6">
@@ -265,7 +265,7 @@
                         <option class="bg-white text-[13px] font-medium text-gray-400 hover:bg-gray-900" value="doing">doing</option>
                         <option class="bg-white text-[13px] font-medium text-gray-400 hover:bg-gray-900" value="done">done</option>
                     </select>
-                    <div id="task-status-error" class="error-message hidden mt-2 px-2 py-2 text-sm text-[#828FA3] w-[190px] h-[48px] opacity-100 rounded-lg shadow-[0px_10px_20px_0px_rgba(54,78,126,0.25)]"></div>
+                    <div id="task-status-error" class="error-message absolute z-10 hidden mt-2 px-2 py-2 text-sm text-[#828FA3] w-[190px] h-[48px] opacity-100 rounded-lg shadow-[0px_10px_20px_0px_rgba(54,78,126,0.25)] bg-white"></div>
                 </div>
 
                 <div class="form-group relative mb-6">
@@ -275,7 +275,7 @@
                         <option class="bg-white text-[13px] font-medium text-gray-400 hover:bg-gray-900" value="medium">medium</option>
                         <option class="bg-white text-[13px] font-medium text-gray-400 hover:bg-gray-900" value="high">high</option>
                     </select>
-                    <div id="task-priority-error" class="error-message hidden mt-2 px-2 py-2 text-sm text-[#828FA3] w-[190px] h-[48px] opacity-100 rounded-lg shadow-[0px_10px_20px_0px_rgba(54,78,126,0.25)]"></div>
+                    <div id="task-priority-error" class="error-message absolute z-10 hidden mt-2 px-2 py-2 text-sm text-[#828FA3] w-[190px] h-[48px] opacity-100 rounded-lg shadow-[0px_10px_20px_0px_rgba(54,78,126,0.25)] bg-white"></div>
                 </div>
 
                 
