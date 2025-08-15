@@ -15,7 +15,7 @@ I also focused on **clean, modular code** that is well-documented for future dev
 ## My Submition Links
 
 - **Recorded Presentation:** A **5-10 minutes** of my [My Loom Presentaion](https://www.loom.com/).
-- **Deployment Link**: [My Netlify Kanban app](https://sweet-pegasus-7a95c7.netlify.app/).
+- **Deployment Link**: [My Netlify Kanban app](https://sips-kanban-task-management-board.netlify.app/).
 
 ## Resources
 My Implementation is based on the:
@@ -129,73 +129,58 @@ A fully functional Kanban app that:
 
 
 ### Desktop view Toggle (Light mode & Dark mode)
-![Add Tasks](./assets/Desktop-view-tasks.png)
+![DaskMode](./references/Desktop-Darkmode.png)
 
-![Local Storage](./assets/Desktop-view-localstorage.png)
+![LightMode](./references/Desktop-Lightmode.png)
 
 ### Desktop view Hide Sidebar (Light mode & Dark mode)
-![Add Tasks](./assets/Desktop-view-tasks.png)
+![Add Tasks](./references/Desktop-DM-HS.png)
 
-![Local Storage](./assets/Desktop-view-localstorage.png)
+![Local Storage](./references/Desktop-LM-HS.png)
 
 ### Desktop view Add New task (Light mode & Dark mode)
 
-![Add Task](./assets/Mobile-view-add-btn.png)
+![Add Task](./references/Desktop-DM-AT.png)
 
-![Modal view](./assets/Mobile-view-modal.png)
+![Modal view](./references/Desktop-LM-AT.png)
 
 ### Desktop view Edit task (Light mode & Dark mode)
 
-![Add Task](./assets/Mobile-view-add-btn.png)
+![Add Task](./references/Desktop-DM-ET.png)
 
-![Modal view](./assets/Mobile-view-modal.png)
+![Modal view](./references/Desktop-LM-ET.png)
 
-![Add Task](./assets/Mobile-view-add-btn.png)
-
-![Modal view](./assets/Mobile-view-modal.png)
 
 ### Desktop Delete task (Light mode & Dark mode)
 
-![Add Task](./assets/Mobile-view-add-btn.png)
+![Add Task](./references/Desktop-DM-DT.png)
 
-![Modal view](./assets/Mobile-view-modal.png)
-
-![Add Task](./assets/Mobile-view-add-btn.png)
-
-![Modal view](./assets/Mobile-view-modal.png)
+![Modal view](./references/Desktop-LM-DT.png)
 
 ### Mobile view Toggle (Light mode & Dark mode)
-![Add Tasks](./assets/Desktop-view-tasks.png)
+![Add Tasks](./references/Mobile-Darkmode.png)
 
-![Local Storage](./assets/Desktop-view-localstorage.png)
+![Local Storage](./references/Mobile-Lightmode.png)
 
 ### Mobile view top Sidebar (Light mode & Dark mode)
-![Add Tasks](./assets/Desktop-view-tasks.png)
+![Add Tasks](./references/Mobile-DM-TB.png)
 
-![Local Storage](./assets/Desktop-view-localstorage.png)
+![Local Storage](./references/Mobile-LM-TB.png)
 
 ### Mobile view Add New task (Light mode & Dark mode)
 
-![Add Task](./assets/Mobile-view-add-btn.png)
+![Add Tasks](./references/Mobile-DM-AT.png)
 
-![Modal view](./assets/Mobile-view-modal.png)
+![Local Storage](./references/Mobile-LM-AT.png)
 
 ### Mobile view Edit task (Light mode & Dark mode)
 
-![Add Task](./assets/Mobile-view-add-btn.png)
+![Add Tasks](./references/Mobile-DM-ET.png)
 
-![Modal view](./assets/Mobile-view-modal.png)
-
-![Add Task](./assets/Mobile-view-add-btn.png)
-
-![Modal view](./assets/Mobile-view-modal.png)
+![Local Storage](./references/Mobile-LM-ET.png)
 
 ### Mobile Delete task (Light mode & Dark mode)
 
-![Add Task](./assets/Mobile-view-add-btn.png)
+![Add Tasks](./references/Mobile-DM-DT.png)
 
-![Modal view](./assets/Mobile-view-modal.png)
-
-![Add Task](./assets/Mobile-view-add-btn.png)
-
-![Modal view](./assets/Mobile-view-modal.png)
+![Local Storage](./references/Mobile-LM-DT.png)

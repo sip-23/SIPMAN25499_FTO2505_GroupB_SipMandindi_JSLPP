@@ -1,3 +1,4 @@
+// Declerations
 const todoTasks = document.getElementById('todo-tasks');
 const doingTasks = document.getElementById('doing-tasks');
 const doneTasks = document.getElementById('done-tasks');
@@ -40,14 +41,14 @@ const editTaskDescInput = document.getElementById('edit-task-description');
 const editTaskStatusInput = document.getElementById('edit-task-status');
 const editTaskPriorityInput = document.getElementById('edit-task-priority');
 
-
+// API
 const API_URL = 'https://jsl-kanban-api.vercel.app/';
 
 // Current task that I want to show
 let currentTask = null;
 let initialTasks = [];
 
-// Loading and Error UI functions
+// Loading function
 function showLoading() {
     if (loadingIndicator) {
         loadingIndicator.classList.remove('hidden');
@@ -57,13 +58,14 @@ function showLoading() {
     }
 }
 
+// Function to hide the loading
 function hideLoading() {
     if (loadingIndicator) {
         loadingIndicator.classList.add('hidden');
     }
 }
 
-// Update showError with null check
+// function to show Error
 function showError(message) {
     if (errorDisplay) {
         errorDisplay.textContent = message;
