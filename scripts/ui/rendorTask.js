@@ -1,5 +1,5 @@
-import { initialTasks } from '../utils/fetchdataApi.js';
-import { createTaskElement } from '../ui/taskElement.js';
+import { initialTasks } from '../../fetchdataApi.js';
+import { createTaskElement } from './taskElement.js';
 
 
 const todoTasks = document.getElementById('todo-tasks');

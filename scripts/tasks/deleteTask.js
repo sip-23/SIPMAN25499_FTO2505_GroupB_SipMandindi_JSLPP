@@ -1,7 +1,8 @@
-import { initialTasks } from '../utils/fetchdataApi.js';
+import { initialTasks } from '../../fetchdataApi.js';
 import { saveTask } from '../utils/localStorage.js';
 import { showSortedTasks } from '../ui/rendorTask.js';
 import { closeModal } from '../ui/modalHandlers.js';
+import { showDeleteConfirmationDialog } from '../ui/confirmDialogs.js'
 
 
 /**

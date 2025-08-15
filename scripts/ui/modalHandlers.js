@@ -1,7 +1,7 @@
-import { initialTasks } from '../utils/fetchdataApi.js';
+import { initialTasks } from '../../fetchdataApi.js';
 import { showSortedTasks } from './rendorTask.js';
 import { saveTask } from '../utils/localStorage.js';
-import { showAdditionConfirmationDialog } from '../ui/confirmDialogs.js';
+import { showAdditionConfirmationDialog } from './confirmDialogs.js';
 
 const modal = document.getElementById('task-modal');
 const editModal = document.getElementById('edit-task-modal');
@@ -34,17 +34,6 @@ export function openEditModal(taskId) {
   
     // Show the modal
     editModal.classList.remove('hidden');
-}
-
-/**
- * Function to open modal
- */
-export function openModel() {
-    taskTitleInput.value = '';
-    taskDescInput.value = '';
-    taskStatusInput.value = 'todo';
-    taskPriorityInput.value = 'low';
-    modal.classList.remove('hidden')
 }
 
 

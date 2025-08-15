@@ -1,8 +1,8 @@
-import { initialTasks } from '../utils/fetchdataApi.js';
+import { initialTasks } from '../../fetchdataApi.js';
 import { saveTask } from '../utils/localStorage.js';
-import { showAdditionConfirmationDialog } from './confirmDialogs.js';
+import { showAdditionConfirmationDialog } from '../ui/confirmDialogs.js';
 import { showSortedTasks } from '../ui/rendorTask.js';
-import { closeModal } from './modalHandlers.js';
+import { closeModal } from '../ui/modalHandlers.js';
 
 const taskForm = document.getElementById('task-form');
 const taskTitleInput = document.getElementById('task-title');
@@ -111,3 +111,11 @@ const validateInputs = () => {
 
     return false;
 };
+
+export function openModel() {
+    taskTitleInput.value = '';
+    taskDescInput.value = '';
+    taskStatusInput.value = 'todo';
+    taskPriorityInput.value = 'low';
+    document.getElementById('task-modal').classList.remove('hidden');
+}

@@ -15,6 +15,13 @@ const deleteTaskBtn = document.getElementById('deleteTaskBtn');
 const modal = document.getElementById('task-modal');
 const editModal = document.getElementById('edit-task-modal');
 const taskForm = document.getElementById('task-form');
+const delConfirmBtn = document.getElementById('delete-confirmed');
+const delCancelBtn = document.getElementById('delete-canceled');
+const additionConfirmedBtn = document.getElementById('addition-confirmed');
+const mobileSidebarBtn = document.getElementById('mobileSidebarBtn');
+const closeMobileSidebarBtn = document.getElementById('closeMobileSidebarBtn');
+const hideSidebarBtn = document.getElementById('hideSidebar');
+const showSidebarBtn = document.getElementById('showSidebar');
 
 
 /**

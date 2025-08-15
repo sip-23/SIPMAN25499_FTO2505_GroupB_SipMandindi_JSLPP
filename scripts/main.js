@@ -1,7 +1,7 @@
-import { showSortedTasks } from '../ui/rendorTask.js';
-import { checkSidebarState } from '../ui/sidebarInteractions.js';
-import { setupEventListeners } from './eventListeners.js';
-import { setupThemeToggle } from '../ui/themeToggle.js';
+import { showSortedTasks } from './ui/rendorTask.js';
+import { checkSidebarState } from './ui/sideBarInteractions.js';
+import { setupEventListeners } from './utils/eventListeners.js';
+import { setupThemeToggle } from './ui/themeToggle.js';
 
 // Initialize the board initially there was 8 now there will be 6
 /**

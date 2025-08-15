@@ -1,6 +1,7 @@
 const toggleSlider = document.getElementById('themeToggle');
 const toggleSliderMobile = document.getElementById('themeToggle-mobile');
 const bod = document.documentElement;
+const toggle = document.getElementById("themeToggle");
 
 /**
  * Toggle event listener for light mode and dark mode

@@ -1,3 +1,6 @@
+import { deleteTask } from '../tasks/deleteTask.js';
+import { getCurrentTask } from './modalHandlers.js';
+
 const deleteConfirmation = document.getElementById('confirm');
 const delConfirmBtn = document.getElementById('delete-confirmed');
 const delCancelBtn = document.getElementById('delete-canceled');
@@ -17,7 +20,11 @@ export function showAdditionConfirmationDialog(){
 export function deleteConfirmed(){
     deleteConfirmation.classList.add('hidden');
     document.body.style.overflow = '';
-    deleteTask(currentTask.id);
+    const currentTask = getCurrentTask();
+    if (currentTask) {
+        deleteTask(currentTask.id);
+    }
+    
 }
 
 export function deleteCanceled(){
