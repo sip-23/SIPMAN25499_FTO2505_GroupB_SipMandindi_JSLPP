@@ -150,7 +150,6 @@ A fully functional Kanban app that:
 
 ![Modal view](./references/Desktop-LM-ET.png)
 
-
 ### Desktop Delete task (Light mode & Dark mode)
 
 ![Add Task](./references/Desktop-DM-DT.png)
