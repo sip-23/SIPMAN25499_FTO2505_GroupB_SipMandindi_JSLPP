@@ -14,7 +14,7 @@ I also focused on **clean, modular code** that is well-documented for future dev
 
 ## My Submition Links
 
-- **Recorded Presentation:** A **5-10 minutes** of my [My Loom Presentaion](https://www.loom.com/).
+- **Recorded Presentation:** A **5-10 minutes** of my [My Loom Presentaion](https://www.loom.com/). **Update link**
 - **Deployment Link**: [My Netlify Kanban app](https://sips-kanban-task-management-board.netlify.app/).
 
 ## Resources
