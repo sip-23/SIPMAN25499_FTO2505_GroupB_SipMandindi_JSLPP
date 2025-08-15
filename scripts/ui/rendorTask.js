@@ -1,8 +1,14 @@
-import { createTaskElement } from './taskElement.js';
+import { initialTasks } from '../utils/fetchdataApi.js';
+import { createTaskElement } from '../ui/taskElement.js';
 
-// Showing the task
-// Implemented function to show all tasks once the script is running on the main section
+
+const todoTasks = document.getElementById('todo-tasks');
+const doingTasks = document.getElementById('doing-tasks');
+const doneTasks = document.getElementById('done-tasks');
+
 /**
+ * Showing the task
+ * Implemented function to show all tasks once the script is running on the main section
  * First cleans the HTML Elements and then Shows or Renders the tasks from the given array to the respactive columns in the DOM
  */
 export function showSortedTasks() {
@@ -39,8 +45,9 @@ export function showSortedTasks() {
     updateTaskCounts();
 }
 
-// Update the task counts in each column header
+
 /**
+ * Update the task counts in each column header
  * Selects the Element container with the specified id and select the last child of the target parent and gives it the value of length of the Elements in that column
  */
 function updateTaskCounts() {

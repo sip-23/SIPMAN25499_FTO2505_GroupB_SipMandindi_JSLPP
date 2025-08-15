@@ -1,3 +1,4 @@
+import { initialTasks } from '../utils/fetchdataApi.js';
 import { saveTask } from '../utils/localStorage.js';
 import { showAdditionConfirmationDialog } from './confirmDialogs.js';
 import { showSortedTasks } from '../ui/rendorTask.js';
@@ -8,7 +9,6 @@ const taskTitleInput = document.getElementById('task-title');
 const taskDescInput = document.getElementById('task-description');
 const taskStatusInput = document.getElementById('task-status');
 const taskPriorityInput = document.getElementById('task-priority');
-
 
 /**
  * Function to add new dask from the modal
