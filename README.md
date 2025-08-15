@@ -131,7 +131,7 @@ A fully functional Kanban app that:
 ### Desktop view Toggle (Light mode & Dark mode)
 ![DaskMode](./references/Desktop-Darkmode.png)
 
-![LightMode](./references/Desktop-Lightmode.png)
+![LightMode](./references/Desktop-LightMode.png)
 
 ### Desktop view Hide Sidebar (Light mode & Dark mode)
 ![Add Tasks](./references/Desktop-DM-HS.png)
