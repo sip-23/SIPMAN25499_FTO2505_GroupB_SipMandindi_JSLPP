@@ -41,23 +41,12 @@ To successfully run this project, I included the following installations and dep
 
 ##### Project Set up
 
-- \Project
-  |
-  - \assets
-  - \scripts
-    |
-    - \tasks
-      |
-      - 
-      -
-    - \ui
-      |
-      - 
-      - 
-    - \utils
-      |
-      - index.html
-      - main.js
+your-project-folder/
+├── index.html
+├── scripts/
+│   ├── main.js
+├── styles/
+│   └── style.css
 
 ##### Deployment & Hosting
 
