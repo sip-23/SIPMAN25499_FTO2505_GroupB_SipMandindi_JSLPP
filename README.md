@@ -14,7 +14,14 @@ I also focused on **clean, modular code** that is well-documented for future dev
 
 ## My Submition Links
 
-- **Recorded Presentation:** A **5-10 minutes** of my [My Loom Presentaion](https://www.loom.com/). **Update link**
+- **Recorded Presentation:** A **5 minutes** of my Presentation videos
+  - [Overview and Desktop view Demo](https://www.loom.com/share/3901fe95802d4d56b149ddd120bab97c?sid=54fee50c-2d0d-4010-ae9a-533711bd5b05)
+  - [Mobile view Demo](https://www.loom.com/share/c89e969029044244a18bbacd6d91f4cc?sid=ae897a38-1246-4caa-a37f-563ff6a589c2).
+  - [Data Fetch and Data persitance Demo](https://www.loom.com/share/9682e1a59693484a85ca5e0041f224cf?sid=7835e986-e7b4-4daf-bded-5946309aa48f).
+  - [Code Demo Cont.](https://www.loom.com/share/3ebd3736d2e843d594dd08146d0f1d39?sid=4147eab6-3ca8-4a97-9a2b-18407df5bc82).
+  - [Code Demo Cont.](https://www.loom.com/share/8b95e3bcb3f646c0bcc83ce008a86080?sid=35e06521-1d8b-4781-aaa3-fd7e00fc6a2e).
+  - [Rendor Task and Challanges Demo](https://www.loom.com/share/30a520a4982d4d2883c0d3260e704fda?sid=cd6f3807-5087-4522-a357-51e2c197a71b).
+
 - **Deployment Link**: [My Netlify Kanban app](https://sips-kanban-task-management-board.netlify.app/).
 
 ## Resources
@@ -42,11 +49,11 @@ To successfully run this project, I included the following installations and dep
 ##### Project Set up
 
 your-project-folder/
-├── index.html
-├── scripts/
-│   ├── main.js
-├── styles/
-│   └── style.css
+- index.html
+- scripts/
+  - main.js
+- styles/
+  - style.css
 
 ##### Deployment & Hosting
 
